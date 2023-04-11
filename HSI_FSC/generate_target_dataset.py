@@ -81,6 +81,7 @@ def main():
     # n = 10249 # IP 16类标签
     # n = 68877 # XZ   9类标签
 
+    print()
     print("\033[0;33;40m{}\033[0m".format("list to ndarray start! it will spend a long time!"))
     start_time = time.time()
     ## listdata trans to ndarray
@@ -94,6 +95,7 @@ def main():
     # print("squeeze : ", label.shape)  # queeze :  (54129,)
     # print(np.unique(label)) # [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15]
     print("\033[0;33;40m{} spend time : {}s \033[0m".format("list to ndarray done!", time.time() - start_time))
+    print()
 
     ## save test
     save_test(DATASETNEME, data, label, band_select_method[0], 'test')
@@ -116,8 +118,8 @@ def save_test(DATASETNEME, data, label, band_select_method, mode):
     mode + \
     '.h5'
     
-    print(path1 + path2)
     print("\033[0;33;40m{} h5 {} dataset saving........................\033[0m".format(DATASETNEME, mode))
+    print(path1 + path2)
     f = h5py.File(path1 + path2, 'w')
     f['data'] = data
     f['label'] = label
@@ -145,12 +147,13 @@ def save_support(DATASETNEME, data, label, band_select_method, mode, support_num
         indices = np.arange(data.shape[0]) 
         shuffled_indices = np.random.permutation(indices)  # 随机排列序列。
         #### 这两步骤会花费巨量的时间 ####
+        print()
         print("\033[0;33;40m{}\033[0m".format("it will spend a long time!"))
         start_time = time.time()
         data = data[shuffled_indices]
         label = label[shuffled_indices]
         print("\033[0;33;40m{} spend time : {}s \033[0m".format("it will spend a long time!", time.time() - start_time))
-
+        print()
         data_s = []
         label_s = []
 
@@ -186,5 +189,5 @@ def save_support(DATASETNEME, data, label, band_select_method, mode, support_num
         print("\033[0;33;40m{} h5 {} dataset {} save success! \033[0m".format(DATASETNEME, mode, jishujun))
 
 if __name__ == '__main__':
-    # make_print_to_file(path='./log', current_filename=sys.argv[0])
+    make_print_to_file(path='./log', current_filename=sys.argv[0])
     main()

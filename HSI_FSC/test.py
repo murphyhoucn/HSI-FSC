@@ -215,7 +215,14 @@ def rn_predict(support_images, test_images, num):
     return predict_label
 
 
-def test(im_width, im_height, channels):
+def test(im_width, im_height, channels, jishujun):
+    print()
+    print()
+    print()
+    print("\033[0;33;40m{}\033[0m".format('*******************************************'))
+    print("\033[0;33;40mtest! load {} support!\033[0m".format(jishujun))
+    print("\033[0;33;40m{}\033[0m".format('*******************************************'))
+    
     # 训练数据集 support
     load_train_dataset_name = \
     '../h5dataset_ica_bandselect_200/' + \
@@ -223,7 +230,9 @@ def test(im_width, im_height, channels):
     str(im_width) + '_' + \
     str(im_height) + '_' + \
     str(depth) + '_support' + \
-    str(n_examples) + '.h5'
+    str(n_examples) + '_' + \
+    str(jishujun) + \
+    '.h5'
 
     print("\033[0;33;40m{}\033[0m".format(str("check the file!")))
     print("\033[0;33;40m{}\033[0m".format(load_train_dataset_name))
@@ -339,5 +348,7 @@ if __name__ == '__main__':
     if not os.path.exists('./log'):
         os.makedirs('log')
     make_print_to_file(path='./log', current_filename=sys.argv[0])
-    
-    test(im_width, im_height, depth)
+
+    dif_supp_data_num = 10
+    for jishujun in range (1, dif_supp_data_num + 1):
+        test(im_width, im_height, depth, jishujun)
