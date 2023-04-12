@@ -28,7 +28,7 @@ from sklearn.decomposition import FastICA, PCA
 # to read ENVI format images
 import spectral.io.envi as envi
 import scipy.io
-
+import mat73
 import h5py
 
 ###########################################################
@@ -177,8 +177,8 @@ if __name__ == '__main__':
 
 
     print("WashingtonDC")
-    img = loadmat('../../dataset/10_WashingtonDC/dc.mat')['imggt']
-    input_image = np.array(input_image).transpose((1, 2, 0))
+    img = scipy.io.loadmat('../../dataset/10_WashingtonDC/dc.mat')['imggt']
+    input_image = np.array(img).transpose((1, 2, 0))
     print(img.shape)
     X=np.reshape(img, (img.shape[0]*img.shape[1],img.shape[2]))
     print(X.shape)

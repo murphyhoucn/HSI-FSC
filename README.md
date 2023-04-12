@@ -25,38 +25,49 @@ ssh -L 8080:container-e19b1182ac-a63c0c57:8097  -p 23844 root@region-11.autodl.c
 # 步骤四：全部完成，在本地网页中输入" localhost:8080 "
 ```
 
-
-
-# 2. meta_train_RN.py
+# 2. band select
 
 ``` bash
-python meta_train_RN.py
+cd ICA-based-band-selection-HSI
+
+# band select
+python ICA-based_for_BS_all.py
+
+# selected bands sorted
+python bandselect_name_bands_sorted.py
 ```
 
-# 3. generate_data
+# 3. generate dataset
+## 3.1 generate source dataset
 
 ``` bash
-cd target_dataset_process
-python generate_data_XX.py 1
+cd source_dataset_process
+jupyter notebook
+# 使用jupyter notebook，运行四个source dataset的处理程序和一个将处理生成的文件合并的程序。
 ```
 
-# 4. fewshot_train_RN
+## 3.2 generate target dataset
+``` bash
+python generate_target_dataset --dataset XX
+```
+
+# 4. meta train
 
 ``` bash
-python fewshot_train_RN_FT_XX.py
+python meta_train_EM_RN.py
 ```
 
-# 5. test
+# 5. fewshot_train_RN
 
 ``` bash
-python test_RN_XX.py
+python fewshot_train.py --datasetname XX
 ```
 
+# 6. test
 
-
-> 重复3（使用不同的随机种子）， 4， 5
->
-> 将test输出的结果做平均，得到最后的结果。
+``` bash
+python test.py --datasetname XX
+```
 
 
 
@@ -78,3 +89,17 @@ RN_TargetDection_finnal
 
 optimizer
 
+
+``` bash
+# 设置代理
+(base) PS D:\Document\DevelopProject\Develop_DeepLearning\HSI\HSI-FSC>
+(base) PS D:\Document\DevelopProject\Develop_DeepLearning\HSI\HSI-FSC> git config --global http.proxy http://127.0.0.1:7890
+(base) PS D:\Document\DevelopProject\Develop_DeepLearning\HSI\HSI-FSC> git config --global https.proxy http://127.0.0.1:7890
+(base) PS D:\Document\DevelopProject\Develop_DeepLearning\HSI\HSI-FSC> git config --global https.proxy
+http://127.0.0.1:7890
+(base) PS D:\Document\DevelopProject\Develop_DeepLearning\HSI\HSI-FSC> git config --global http.proxy
+http://127.0.0.1:7890
+# 取消代理
+git config --global --unset http.proxy 
+git config --global --unset https.proxy
+```
