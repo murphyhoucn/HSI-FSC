@@ -37,7 +37,7 @@
 
 > embedding部分回进入两部分数据，support和query。如果是support，batch维度的数值是20，如果是query，batch维度的数值是380
 
-> support 与 query经过embedding后，得到[20,  64, 2, 5, 5] 与 [380, 64, 2, 5, 5]，两者concatenate后，得到[7600, 256, 5, 5]（这个是使用很复杂的代码生成的，其实没搞懂是怎么得到的）
+> support 与 query经过embedding后，得到[20,  64, 2, 5, 5] 与 [380, 64, 2, 5, 5]，两者concatenate后，得到[7600, 256, 5, 5]（这个是使用很复杂的代码（各种view和reshape），其实没搞懂是怎么得到的）
 
 ## Relation Network
 
