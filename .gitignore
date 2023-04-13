@@ -37,18 +37,12 @@ ehthumbs.db
 Thumbs.db
 .vscode
 
-Python_Programming_BOOK/
-__pycache__/
-build/
-dist/
-*.dat
-*.spec
 
 
 # HSI
-.h5
-.mat
-.pkl
+*.h5
+*.mat
+*.pkl
 __pycache__/
 server/
 .ipynb_checkpoints/
