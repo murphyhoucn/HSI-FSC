@@ -354,12 +354,14 @@ def get_dataset(dataset_name, target_folder="./", datasets=DATASETS_CONFIG):
     img = np.asarray(img, dtype="float32")
     img = (img - np.min(img)) / (np.max(img) - np.min(img))
 
-    print("=====================get_dataset Murphy 13-Apr-23===============================")
+    print()
+    print("=====================<dataset get_dataset>Murphy 13-Apr-23===============================")
     print(img.shape)
     print(gt.shape)
     print(gt.max(), gt.min())  # 为标记是0，有标记是1 ~ n_classes
-    print("=====================get_dataset Murphy 13-Apr-23===============================")
+    print("=====================<dataset get_dataset>Murphy 13-Apr-23===============================")
     print()
+    
     return img, gt, label_values, ignored_labels, rgb_bands, palette
 
 

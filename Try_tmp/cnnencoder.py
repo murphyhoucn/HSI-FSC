@@ -9,7 +9,6 @@ import argparse
 import h5py
 import time
 
-
 class CNNEncoder(nn.Module):
     """docstring for ClassName"""
     def __init__(self):

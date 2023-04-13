@@ -49,6 +49,9 @@ from models import get_model, train, test, save_model
 
 import argparse
 
+
+
+
 dataset_names = [
     v["name"] if "name" in v.keys() else k for k, v in DATASETS_CONFIG.items()
 ]
@@ -113,7 +116,7 @@ group_dataset.add_argument(
     "--sampling_mode",
     type=str,
     help="Sampling mode" " (random sampling or disjoint, default: random)",
-    default="random",
+    default="murphy_5sample_perclass",
 )
 group_dataset.add_argument(
     "--train_set",
@@ -226,6 +229,62 @@ TRAIN_GT = args.train_set
 TEST_GT = args.test_set
 TEST_STRIDE = args.test_stride
 
+
+
+# ==== <main>  murphy 13-apr-23 ======
+
+import time
+import sys
+def make_print_to_file(path='./', current_filename='default', DATASET1 = 'none'):
+    '''
+    path  it is a path for save your log about fuction print
+    example:
+    use  make_print_to_file()   and the   all the information of funtion print , will be write in to a log file
+    :return:
+    '''
+    class Logger(object):
+        def __init__(self, filename="Default.log", path="./"):
+            self.terminal = sys.stdout
+            self.path= os.path.join(path, filename)
+            self.log = open(self.path, "a", encoding='utf8',)
+            print("save:", os.path.join(self.path, filename))
+ 
+        def write(self, message):
+            self.terminal.write(message)
+            self.log.write(message)
+ 
+        def flush(self):
+            pass
+
+    nowtime = time.localtime()
+    nowtime_style = time.strftime("%Y-%m-%d_%H_%M_%S", nowtime)
+
+    fileName = current_filename + '_' + str(DATASET1) + '_' + nowtime_style
+    sys.stdout = Logger(fileName + '.log', path=path + '/')
+ 
+    #############################################################
+    # 这里输出之后的所有的输出的print 内容即将写入日志
+    #############################################################
+    print(fileName.center(60,'*'))
+
+    # ————————————————
+    # 版权声明：本文为CSDN博主「JY丫丫」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+    # 原文链接：https://blog.csdn.net/xu380393916/article/details/100887083
+
+# ==== <main>  murphy 13-apr-23 ======
+tmp_log_path = './log/' + str(MODEL)
+if not os.path.exists(tmp_log_path):
+    os.makedirs(tmp_log_path)
+make_print_to_file(path=tmp_log_path, current_filename=sys.argv[0], DATASET1 = DATASET)
+
+print("=============================================================================")
+print("=============================================================================")
+print("=============================================================================")
+print(MODEL, DATASET)
+print("=============================================================================")
+print("=============================================================================")
+print("=============================================================================")
+
 if args.download is not None and len(args.download) > 0:
     for dataset in args.download:
         get_dataset(dataset, target_folder=FOLDER)
@@ -303,11 +362,10 @@ for run in range(N_RUNS):
     elif TEST_GT is not None:
         test_gt = open_file(TEST_GT)
     else:
-        # Sample random training spectra
-        train_gt, test_gt = sample_gt(gt, SAMPLE_PERCENTAGE, mode='murphy_5sample_perclass')
-        # train_gt, test_gt = sample_gt(gt, SAMPLE_PERCENTAGE, mode='murphy_5sample_perclass')
-
-        print("===============================main:Murphy 13-Apr-23=======================================")
+        train_gt, test_gt = sample_gt(gt, SAMPLE_PERCENTAGE, mode=SAMPLING_MODE)
+        # 这里的mode是Murphy写的规则，每类随机取得5个样本点
+        print()
+        print("===============================<main> Murphy 13-Apr-23=======================================")
         # print(train_gt.shape)
         # print(test_gt.shape)
 
@@ -350,7 +408,8 @@ for run in range(N_RUNS):
                     hs_dict[test_gt[i][j]] += 1
         print(hs_dict)
         print(sum(hs_dict.values()))
-        print("===============================main:Murphy 13-Apr-23=======================================")
+        print("===============================<main> Murphy 13-Apr-23=======================================")
+        print()
 
     print(
         "{} samples selected (over {})".format(
@@ -420,7 +479,12 @@ for run in range(N_RUNS):
         # Neural network
         model, optimizer, loss, hyperparams = get_model(MODEL, **hyperparams)
         # Split train set in train/val
-        train_gt, val_gt = sample_gt(train_gt, 0.95, mode="random")
+        # train_gt, val_gt = sample_gt(train_gt, 0.95, mode="random")
+
+        # ========== <main> murphy 13-apr-23 ==========
+        train_gt, val_gt = sample_gt(gt, SAMPLE_PERCENTAGE, mode=SAMPLING_MODE)
+        # ========== <main> murphy 13-apr-23 ==========
+
         # Generate the dataset
         train_dataset = HyperX(img, train_gt, **hyperparams)
         train_loader = data.DataLoader(

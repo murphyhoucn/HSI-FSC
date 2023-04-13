@@ -96,7 +96,12 @@ def display_predictions(pred, vis, gt=None, caption=""):
                     np.transpose(gt, (2, 0, 1))],
                     nrow=2,
                     opts={'caption': caption})
-
+        # ============== <utils display_predictions> murphy 13-apr-23 =================
+        vis.images([np.transpose(pred, (2, 0, 1))],
+                    opts={'caption': caption})
+        vis.images([np.transpose(gt, (2, 0, 1))],
+                    opts={'caption': caption})
+        # ============== <utils display_predictions> murphy 13-apr-23 =================
 def display_dataset(img, gt, bands, labels, palette, vis):
     """Display the specified dataset.
 
@@ -348,7 +353,7 @@ def metrics(prediction, target, ignored_labels=[], n_classes=None, model_name='n
     prediction = prediction[ignored_mask]
 
     print()
-    print("===============================utils metrics: murphy 13-apr-23=======================================")
+    print("===============================<utils metrics> murphy 13-apr-23=======================================")
     # print(type(target))  # <class 'numpy.ndarray'>
     # print(type(prediction))  # <class 'numpy.ndarray'>
     # print(target.shape)
@@ -364,6 +369,8 @@ def metrics(prediction, target, ignored_labels=[], n_classes=None, model_name='n
 
 
     model_dir = "./checkpoints/" + model_name + "/" + dataset_name + "/"
+    if not os.path.exists(model_dir):
+        os.makedirs(model_dir)
     file_name = 'label_test_predict_' + nowtime_style +'.csv'
 
     label_csv = open(model_dir + file_name, 'w', encoding='utf-8', newline='')
@@ -372,7 +379,7 @@ def metrics(prediction, target, ignored_labels=[], n_classes=None, model_name='n
     for j in range(target.shape[0]):
         label_csv_writer.writerow([str(target[j] - 1), str(prediction[j] - 1)])
     label_csv.close()
-    print("===============================utils metrics: murphy 13-apr-23=======================================")
+    print("===============================<utils metrics> murphy 13-apr-23=======================================")
     print()
 
 
@@ -444,10 +451,10 @@ def show_results(results, vis, label_values=None, agregated=False):
     text += "---\n"
 
     if agregated:
-        text += ("Accuracy: {:.03f} +- {:.03f}\n".format(np.mean(accuracies),
+        text += ("Accuracy(OA): {:.03f} +- {:.03f}\n".format(np.mean(accuracies),
                                                          np.std(accuracies)))
     else:
-        text += "Accuracy : {:.03f}%\n".format(accuracy)
+        text += "Accuracy(OA) : {:.03f}%\n".format(accuracy)
     text += "---\n"
 
     text += "F1 scores :\n"
@@ -469,6 +476,15 @@ def show_results(results, vis, label_values=None, agregated=False):
     vis.text(text.replace('\n', '<br/>'))
     print(text)
 
+    # ========== <utils show_results> murphy 13-apr-23 ==========
+    aa_tmp = 0
+    for label, score in zip(label_values, F1scores):
+        # print(label, score)
+        if label != 'Undefined':
+            aa_tmp += score
+    # print(aa_tmp)
+    print("AA = {} %".format(aa_tmp / len(sum(cm)) * 100))
+    # ========== <utils show_results> murphy 13-apr-23 ==========
 
 def sample_gt(gt, train_size, mode='random'):
     """Extract a fixed percentage of samples from an array of labels.
@@ -494,17 +510,10 @@ def sample_gt(gt, train_size, mode='random'):
        test_indices = [list(t) for t in zip(*test_indices)]
        train_gt[train_indices] = gt[train_indices]
        test_gt[test_indices] = gt[test_indices]
-       print("=====================utils sample_gt: Murphy 13-Apr-23===============================")
-       print(train_gt)
-       print(test_gt)
-       print("=====================utils sample_gt: Murphy 13-Apr-23===============================")
-
-
-
 
     elif mode == 'murphy_5sample_perclass':
         print()
-        print("=====================utils sample_gt: murphy_5sample_perclass Murphy 13-Apr-23===============================")
+        print("=====================<utils sample_gt> murphy_5sample_perclass Murphy 13-Apr-23===============================")
         # print(gt.max())
         index_nd_list = []
         for i in range(gt.max()):
@@ -535,7 +544,7 @@ def sample_gt(gt, train_size, mode='random'):
                 else:
                     train_gt[i][j] = 0
         test_gt = gt
-        print("=====================utils sample_gt: murphy_5sample_perclass Murphy 13-Apr-23===============================")
+        print("=====================<utils sample_gt> murphy_5sample_perclass Murphy 13-Apr-23===============================")
         print()
 
     elif mode == 'fixed':
