@@ -66,6 +66,8 @@ def fewshot_train(im_width, im_height, depth):
     cur_filename = path_list[-1]
     # print(cur_filename)
     viz = visdom.Visdom(env = cur_filename)
+    if not viz.check_connection:
+        print("Visdom is not connected. Did you run 'python -m visdom.server' ?")
     viz_tmp_name1 = 'fewshot_' + h5datasetname +'_loss'
     viz_tmp_name2 = 'fewshot_' + h5datasetname +'_acc'
     viz.line([[0.5]], [0], win= viz_tmp_name1, opts=dict(title=viz_tmp_name1, legend=[viz_tmp_name1]))

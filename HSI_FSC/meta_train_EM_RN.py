@@ -29,7 +29,8 @@ path_list = current_path.split("/") # linux
 cur_filename = path_list[-1]
 # print(cur_filename)
 viz = visdom.Visdom(env = cur_filename)
-
+if not viz.check_connection:
+    print("Visdom is not connected. Did you run 'python -m visdom.server' ?")
 viz.line([[0.5]], [0], win='meta_training_loss', opts=dict(title='meta_training_loss', legend=['meta_training_loss']))
 viz.line([[0.]], [0], win='meta_training_acc', opts=dict(title='meta_training_acc', legend=['meta_training_acc']))
 

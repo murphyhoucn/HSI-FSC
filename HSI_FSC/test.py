@@ -64,7 +64,8 @@ path_list = current_path.split("/") # linux
 cur_filename = path_list[-1]
 # print(cur_filename)
 viz = visdom.Visdom(env = cur_filename)
-
+if not viz.check_connection:
+    print("Visdom is not connected. Did you run 'python -m visdom.server' ?")
 viz_tmp_name1 = 'test_' + h5datasetname +'_result'
 viz_tmp_name2 = 'test_' + h5datasetname +'_acc'
 viz.text(' ',win= viz_tmp_name1, opts=dict(title=viz_tmp_name1))
