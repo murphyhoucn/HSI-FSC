@@ -49,9 +49,10 @@ server/
 dataset/
 h5dataset_ica_bandselect_200/
 resultDataProcess/
-DeepHyperX/.github
-DeepHyperX/.vscode
-DeepHyperX/__pycache__
-DeepHyperX/checkpoints
-DeepHyperX/Datasets
+DeepHyperX/.github/
+DeepHyperX/.vscode/
+DeepHyperX/__pycache__/
+DeepHyperX/checkpoints/
+DeepHyperX/Datasets/
+DeepHyperX/log/
 Record/

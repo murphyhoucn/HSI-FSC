@@ -203,3 +203,44 @@ def band_select(dataset_name, band_select_method):
     # print(selected_bands)
 
     return selected_bands
+
+
+def convert_to_color(x, palette):
+    return convert_to_color_(x, palette=palette)
+
+def convert_to_color_(arr_2d, palette=None):
+    """Convert an array of labels to RGB color-encoded image.
+
+    Args:
+        arr_2d: int 2D array of labels
+        palette: dict of colors used (label number -> RGB tuple)
+
+    Returns:
+        arr_3d: int 2D images of color-encoded labels in RGB format
+
+    """
+    arr_3d = np.zeros((arr_2d.shape[0], arr_2d.shape[1], 3), dtype=np.uint8)
+    if palette is None:
+        raise Exception("Unknown color palette")
+
+    for c, i in palette.items():
+        m = arr_2d == c
+        arr_3d[m] = i
+
+    return arr_3d
+
+def display_predictions(pred, vis, gt=None, caption=""):
+    if gt is None:
+        vis.images([np.transpose(pred, (2, 0, 1))],
+                    opts={'caption': caption})
+    else:
+        vis.images([np.transpose(pred, (2, 0, 1)),
+                    np.transpose(gt, (2, 0, 1))],
+                    nrow=2,
+                    opts={'caption': caption})
+        # ============== <utils display_predictions> murphy 13-apr-23 =================
+        vis.images([np.transpose(pred, (2, 0, 1))],
+                    opts={'caption': caption})
+        vis.images([np.transpose(gt, (2, 0, 1))],
+                    opts={'caption': caption})
+        # ============== <utils display_predictions> murphy 13-apr-23 =================

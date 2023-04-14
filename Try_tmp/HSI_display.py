@@ -25,11 +25,6 @@ args = parser.parse_args()
 FOLDER = args.folder
 DATASET = args.dataset
 
-
-
-
-
 img, gt, LABEL_VALUES, IGNORED_LABELS, RGB_BANDS, palette = get_dataset(DATASET, FOLDER)
-
 
 display_dataset(img, gt, RGB_BANDS, LABEL_VALUES, palette, viz)

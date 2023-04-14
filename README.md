@@ -10,6 +10,7 @@ reference code:
 - [floodsung/LearningToCompare_FSL: PyTorch code for CVPR 2018 paper: Learning to Compare: Relation Network for Few-Shot Learning (Few-Shot Learning part) (github.com)](https://github.com/floodsung/LearningToCompare_FSL)
 -  [gokling1219/RN-FSC: Deep Relation Network for Hyperspectral Image Few-Shot Classification (github.com)](https://github.com/gokling1219/RN-FSC)
 - [EnayatAria/ICA-based-band-selection-HSI: Independent component analysis for dimensionality reduction of hyperspectral images (github.com)](https://github.com/EnayatAria/ICA-based-band-selection-HSI)
+- [nshaud/DeepHyperX: Deep learning toolbox based on PyTorch for hyperspectral data classification. (github.com)](https://github.com/nshaud/DeepHyperX)
 
 # environment
 
@@ -62,45 +63,9 @@ ipython                           8.12.0
 >
 > **memory**:：80GB
 
-
-
 # directory
 
 ``` markdown
-(dlpy39pth112) PS D:\Document\DevelopProject\Develop_DeepLearning\HSI\HSI-FSC> tree /f
-Folder PATH listing for volume DATA
-Volume serial number is 100A-93DC
-D:.
-│  .gitignore
-│  LICENSE
-│  README.md
-│  requirements.txt
-│  记录.md
-│  记录.pdf
-├─dataset
-├─h5dataset_ica_bandselect_200
-├─HSI_FSC ⭐⭐⭐
-│  │  EM_RN_model.py
-│  │  fewshot_train.py
-│  │  generate_meta_dataset.py
-│  │  generate_source_dataset.py
-│  │  generate_target_dataset.py
-│  │  Hyperparameters.md
-│  │  meta_train_EM_RN.py
-│  │  test.py
-│  │  utils.py
-│  ├─log
-│  ├─model
-│  ├─result
-├─ICA-based-band-selection-HSI
-│      bandselect_name_bands_sorted.py
-│      ICA-based_for_BS_all.py
-├─LearningToCompare_FSL-master
-├─resultDataProcess
-├─RN-FSC-main
-├─RN_FSC_modify
-├─server
-└─Try_tmp
 
 ```
 
@@ -159,17 +124,17 @@ cd HSI_FSC
 ```
 
 ``` bash
-python generate_source_dataset.py --datasetname HS
-python generate_source_dataset.py --datasetname BO
-python generate_source_dataset.py --datasetname KSC
-python generate_source_dataset.py --datasetname CH
+python .\generate_source_dataset.py --datasetname HS
+python .\generate_source_dataset.py --datasetname BO
+python .\generate_source_dataset.py --datasetname KSC
+python .\generate_source_dataset.py --datasetname CH
 
-python generate_meta_dataset.py
+python .\generate_meta_dataset.py
 ```
 
 ### 3.2 generate target dataset
 ``` bash
-python generate_target_dataset --dataset XX
+python .\generate_target_dataset --dataset XX
 
 # XX: SA/IP/UP/PC/XZ
 ```
@@ -177,20 +142,44 @@ python generate_target_dataset --dataset XX
 ## 4. meta train
 
 ``` bash
-python meta_train_EM_RN.py
+python .\meta_train_EM_RN.py
 ```
 
 ## 5. fewshot train
 
 ``` bash
-python fewshot_train.py --datasetname XX
+python .\fewshot_train.py --datasetname XX
 ```
 
 ## 6. test
 
 ``` bash
-python test.py --datasetname XX
+python .\test.py --datasetname XX
 ```
+
+## 7. generate predict image
+
+``` bash
+python .\display_result_with_visdom.py
+```
+
+
+
+## 8. contrast experiment
+
+``` bash
+ cd .\DeepHyperX\
+```
+
+``` bash
+ # windows 
+ .\auto.bat
+ 
+ # linux
+ bash auto.sh
+```
+
+
 
 # adjust the parameters
 

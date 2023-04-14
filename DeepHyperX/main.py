@@ -532,6 +532,8 @@ for run in range(N_RUNS):
         probabilities = test(model, img, hyperparams)
         prediction = np.argmax(probabilities, axis=-1)
 
+    
+
     run_results = metrics(
         prediction,
         test_gt,
@@ -540,19 +542,35 @@ for run in range(N_RUNS):
         model_name = MODEL,
         dataset_name = DATASET
     )
+    print("=====<main> murphy 14-apr-23 ==========")
+    print(prediction.max())
+    print(prediction.min())
+    print(prediction.shape)
+    
+    
 
     mask = np.zeros(gt.shape, dtype="bool")
     for l in IGNORED_LABELS:
         mask[gt == l] = True
     prediction[mask] = 0
 
+    print(prediction.max())
+    print(prediction.min())
+    print(prediction.shape)
+
+    
     color_prediction = convert_to_color(prediction)
+    # print(type(prediction))
+    # print(prediction)
+    # print(type(color_prediction))
+    # print(color_prediction)
     display_predictions(
         color_prediction,
         viz,
         gt=convert_to_color(test_gt),
         caption="Prediction vs. test ground truth",
     )
+    print("=====<main> murphy 14-apr-23 ==========")
 
     results.append(run_results)
     show_results(run_results, viz, label_values=LABEL_VALUES)

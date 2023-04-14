@@ -240,7 +240,6 @@ def get_dataset(dataset_name, target_folder="./"):
 
     return img, gt, label_values, ignored_labels, rgb_bands, palette
 
-
 def display_dataset(img, gt, bands, labels, palette, vis):
     """Display the specified dataset.
 
