@@ -43,6 +43,9 @@ Thumbs.db
 *.h5
 *.mat
 *.pkl
+*.csv
+*.svg
+*.png
 __pycache__/
 server/
 .ipynb_checkpoints/
@@ -56,3 +59,7 @@ DeepHyperX/checkpoints/
 DeepHyperX/Datasets/
 DeepHyperX/log/
 Record/
+HSI_FSC_0_basic/
+HSI_FSC_1_learningrate/
+HSI_FSC_2_Dropout/
+HSI_FSC_3_BatchNorm/
