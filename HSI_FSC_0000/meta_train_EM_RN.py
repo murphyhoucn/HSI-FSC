@@ -82,7 +82,7 @@ def meta_train(im_width, im_height, depth):
     ## Adam优化器，和lr更新策略
     feature_encoder_optim = torch.optim.Adam(feature_encoder.parameters(), lr=LEARNING_RATE)
     feature_encoder_scheduler = StepLR(optimizer=feature_encoder_optim, step_size=5000, gamma=0.5)
-    ## 每过step_size次,更新一次学习率;每经过100000次，学习率折半
+    ## 每过step_size次,更新一次学习率;每经过5000次，学习率折半
     relation_network_optim = torch.optim.Adam(relation_network.parameters(), lr=LEARNING_RATE)
     relation_network_scheduler = StepLR(relation_network_optim, step_size=5000, gamma=0.5)
 

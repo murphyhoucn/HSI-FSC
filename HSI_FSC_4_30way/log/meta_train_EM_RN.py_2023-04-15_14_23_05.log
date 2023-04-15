@@ -1,0 +1,3 @@
+**********meta_train_EM_RN.py_2023-04-15_14_23_05***********
+n_way = 30, n_shot = 1, n_query = 19, META_EPISODE = 10000, LEARNING_RATE = 0.001, GPU = 0
+n_examples = 200, im_width = 28, im_height = 28, depth = 100

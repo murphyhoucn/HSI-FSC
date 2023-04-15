@@ -1,8 +1,5 @@
 python meta_train_EM_RN.py
 
-
-
-
 python fewshot_train.py --datasetname SA --count 0
 python test.py --datasetname SA --count 0
 
@@ -33,9 +30,6 @@ python test.py --datasetname SA --count 8
 python fewshot_train.py --datasetname SA --count 9
 python test.py --datasetname SA --count 9
 
-
-
-
 python fewshot_train.py --datasetname IP --count 0
 python test.py --datasetname IP --count 0
 
@@ -65,8 +59,6 @@ python test.py --datasetname IP --count 8
 
 python fewshot_train.py --datasetname IP --count 9
 python test.py --datasetname IP --count 9
-
-
 
 
 python fewshot_train.py --datasetname UP --count 0
@@ -100,10 +92,6 @@ python fewshot_train.py --datasetname UP --count 9
 python test.py --datasetname UP --count 9
 
 
-
-
-
-
 # python fewshot_train.py --datasetname XZ --count 0
 # python test.py --datasetname XZ --count 0
 
@@ -121,10 +109,6 @@ python test.py --datasetname UP --count 9
 
 # python fewshot_train.py --datasetname XZ --count 5
 # python test.py --datasetname XZ --count 5
-
-
-
-
 
 
 
