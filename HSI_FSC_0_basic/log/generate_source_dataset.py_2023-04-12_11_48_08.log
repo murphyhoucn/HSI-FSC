@@ -1,0 +1,26 @@
+******.\generate_source_dataset.py_2023-04-12_11_48_08******
+
+[0;33;40mHS HSI img shape = (349, 1905, 144)[0m
+[0;33;40mHS HSI_band_selected img shape = (349, 1905, 100)[0m
+[0;33;40mHS HSI label num(excluding unlabeled) = 15[0m
+[0;33;40mHS HSI & gt padding shape = (377, 1933, 100), (377, 1933)[0m
+[0;33;40mHS HSI(unpadding) has label num = 15029[0m
+
+[0;33;40mlist to ndarray start! it will spend a long time![0m
+[0;33;40mlist to ndarray done! spend time : 1.6160831451416016s [0m
+
+[0;33;40mHS HSI dataset class and labels : {0: 1251, 1: 1254, 2: 697, 3: 1244, 4: 1242, 5: 325, 6: 1268, 7: 1244, 8: 1252, 9: 1227, 10: 1235, 11: 1233, 12: 469, 13: 428, 14: 660} [0m
+[0;33;40mHS HSI(unpadding) has label num = 15029[0m
+
+[0;33;40mit will spend a long time![0m
+[0;33;40mit will spend a long time! spend time : 1.2412960529327393s [0m
+
+[0;33;40mHS dataset has 15 classes [0m
+[0;33;40mHS dataset only 15 classes samples more than 200 [0m
+[0;33;40mthey are[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14][0m
+
+t_images (3000, 78400)
+t_labels (3000,)
+[0;33;40mHS h5 source dataset saving........................[0m
+../h5dataset_ica_bandselect_200/HS_28_28_100.h5
+[0;33;40mHS h5 source dataset save success![0m

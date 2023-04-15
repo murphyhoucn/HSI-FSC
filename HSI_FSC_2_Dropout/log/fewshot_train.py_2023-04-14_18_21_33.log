@@ -1,0 +1,214 @@
+************fewshot_train.py_2023-04-14_18_21_33************
+[0;33;40mcheck the file![0m
+[0;33;40m./model/meta_training_embedding_20way_1shot_19querty_0.001learning_10000metatrainepisode.pkl[0m
+[0;33;40m./model/meta_training_relation_20way_1shot_19querty_0.001learning_10000metatrainepisode.pkl[0m
+[0;33;40mload feature encoder success[0m
+[0;33;40mload relation network success[0m
+[0;33;40mcheck the file![0m
+[0;33;40m../h5dataset_ica_bandselect_200/SA_28_28_100_support5_5.h5[0m
+episode: 10 loss tensor(0.0290, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 68.75
+episode: 20 loss tensor(0.0248, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 76.5625
+episode: 30 loss tensor(0.0090, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 93.75
+episode: 40 loss tensor(0.0050, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 98.4375
+episode: 50 loss tensor(0.0034, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 95.3125
+episode: 60 loss tensor(0.0020, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 98.4375
+episode: 70 loss tensor(0.0013, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 98.4375
+episode: 80 loss tensor(0.0017, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 90 loss tensor(0.0040, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 95.3125
+episode: 100 loss tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 98.4375
+episode: 110 loss tensor(0.0039, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 96.875
+episode: 120 loss tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 98.4375
+episode: 130 loss tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 140 loss tensor(0.0011, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 150 loss tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 98.4375
+episode: 160 loss tensor(0.0039, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 96.875
+episode: 170 loss tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 180 loss tensor(4.7590e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 190 loss tensor(4.8261e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 200 loss tensor(6.3813e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 210 loss tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 220 loss tensor(9.8904e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 230 loss tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 240 loss tensor(2.3343e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 250 loss tensor(0.0006, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 260 loss tensor(9.3390e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 270 loss tensor(3.9480e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 280 loss tensor(1.5758e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 290 loss tensor(5.9839e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 300 loss tensor(2.7397e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 310 loss tensor(2.9399e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 320 loss tensor(5.3140e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 330 loss tensor(2.1561e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 340 loss tensor(8.3335e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 350 loss tensor(1.7218e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 360 loss tensor(2.3470e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 370 loss tensor(1.2440e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 380 loss tensor(1.0043e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 390 loss tensor(5.5771e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 400 loss tensor(7.8766e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 410 loss tensor(3.0347e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 420 loss tensor(1.4665e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 430 loss tensor(1.0014e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 440 loss tensor(1.5084e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 450 loss tensor(5.4713e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 460 loss tensor(1.7351e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 470 loss tensor(6.6333e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 480 loss tensor(8.6397e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 490 loss tensor(1.2976e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 500 loss tensor(6.9009e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 510 loss tensor(5.9997e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 520 loss tensor(7.0761e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 530 loss tensor(1.1089e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 540 loss tensor(9.6188e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 550 loss tensor(7.6698e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 560 loss tensor(2.4639e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 570 loss tensor(2.1425e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 580 loss tensor(4.4249e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 590 loss tensor(9.3831e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 600 loss tensor(3.6801e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 610 loss tensor(5.2265e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 620 loss tensor(6.0982e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 630 loss tensor(8.9427e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 640 loss tensor(4.2475e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 650 loss tensor(3.1166e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 660 loss tensor(3.2099e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 670 loss tensor(3.4568e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 680 loss tensor(3.8816e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 690 loss tensor(3.9244e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 700 loss tensor(4.4000e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 710 loss tensor(4.5434e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 720 loss tensor(8.7072e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 730 loss tensor(6.6068e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 740 loss tensor(1.1934e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 750 loss tensor(4.7415e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 760 loss tensor(4.2092e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 770 loss tensor(5.2521e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 780 loss tensor(3.3025e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 790 loss tensor(6.2537e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 800 loss tensor(3.8884e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 810 loss tensor(4.4478e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 820 loss tensor(6.2763e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 830 loss tensor(3.2889e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 840 loss tensor(6.4390e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 850 loss tensor(6.3462e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 860 loss tensor(5.5596e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 870 loss tensor(7.9565e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 880 loss tensor(3.5338e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 890 loss tensor(4.0142e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 900 loss tensor(5.0866e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 910 loss tensor(5.3027e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 920 loss tensor(3.2125e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 930 loss tensor(4.3971e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 940 loss tensor(4.4387e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 950 loss tensor(4.1417e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 960 loss tensor(2.6032e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 970 loss tensor(3.9118e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 980 loss tensor(2.7227e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 990 loss tensor(9.4825e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+episode: 1000 loss tensor(7.0250e-07, device='cuda:0', grad_fn=<MseLossBackward0>)
+accuracy: 100.0
+few shot learning time : 39.306116819381714
+[0;33;40mcheck the file![0m
+[0;33;40m./model/SA_embdeeing_fewshot_1000fewshotepisode_5.pkl[0m
+[0;33;40mcheck the file![0m
+[0;33;40m./model/SA_relation_fewshot_1000fewshotepisode_5.pkl[0m
+few shot model save success!

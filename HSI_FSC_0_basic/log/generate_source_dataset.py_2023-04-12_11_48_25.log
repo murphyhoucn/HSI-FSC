@@ -1,0 +1,26 @@
+******.\generate_source_dataset.py_2023-04-12_11_48_25******
+
+[0;33;40mKSC HSI img shape = (512, 614, 176)[0m
+[0;33;40mKSC HSI_band_selected img shape = (512, 614, 100)[0m
+[0;33;40mKSC HSI label num(excluding unlabeled) = 13[0m
+[0;33;40mKSC HSI & gt padding shape = (540, 642, 100), (540, 642)[0m
+[0;33;40mKSC HSI(unpadding) has label num = 5211[0m
+
+[0;33;40mlist to ndarray start! it will spend a long time![0m
+[0;33;40mlist to ndarray done! spend time : 0.5087282657623291s [0m
+
+[0;33;40mKSC HSI dataset class and labels : {0: 761, 1: 243, 2: 256, 3: 252, 4: 161, 5: 229, 6: 105, 7: 431, 8: 520, 9: 404, 10: 419, 11: 503, 12: 927} [0m
+[0;33;40mKSC HSI(unpadding) has label num = 5211[0m
+
+[0;33;40mit will spend a long time![0m
+[0;33;40mit will spend a long time! spend time : 0.42165279388427734s [0m
+
+[0;33;40mKSC dataset has 13 classes [0m
+[0;33;40mKSC dataset only 11 classes samples more than 200 [0m
+[0;33;40mthey are[0, 1, 2, 3, 5, 7, 8, 9, 10, 11, 12][0m
+
+t_images (2200, 78400)
+t_labels (2200,)
+[0;33;40mKSC h5 source dataset saving........................[0m
+../h5dataset_ica_bandselect_200/KSC_28_28_100.h5
+[0;33;40mKSC h5 source dataset save success![0m

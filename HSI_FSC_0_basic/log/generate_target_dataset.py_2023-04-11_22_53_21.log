@@ -1,0 +1,84 @@
+******.\generate_target_dataset.py_2023-04-11_22_53_21******
+
+[0;33;40mIP HSI img shape = (145, 145, 200)[0m
+[0;33;40mIP HSI_band_selected img shape = (145, 145, 100)[0m
+[0;33;40mIP HSI label num(excluding unlabeled) = 16[0m
+[0;33;40mIP HSI & gt padding shape = (173, 173, 100), (173, 173)[0m
+[0;33;40mIP HSI(unpadding) has label num = 10249[0m
+
+[0;33;40mlist to ndarray start! it will spend a long time![0m
+[0;33;40mlist to ndarray done! spend time : 1.0641839504241943s [0m
+
+[0;33;40mIP h5 test dataset saving........................[0m
+../h5dataset_ica_bandselect_200/IP_28_28_100_test.h5
+[0;33;40mIP h5 test dataset save success![0m
+
+[0;33;40mit will spend a long time![0m
+[0;33;40mit will spend a long time! spend time : 0.7582564353942871s [0m
+
+[0;33;40mIP h5 support dataset 1 saving........................[0m
+../h5dataset_ica_bandselect_200/IP_28_28_100_support5_1.h5
+[0;33;40mIP h5 support dataset 1 save success! [0m
+
+[0;33;40mit will spend a long time![0m
+[0;33;40mit will spend a long time! spend time : 0.8749723434448242s [0m
+
+[0;33;40mIP h5 support dataset 2 saving........................[0m
+../h5dataset_ica_bandselect_200/IP_28_28_100_support5_2.h5
+[0;33;40mIP h5 support dataset 2 save success! [0m
+
+[0;33;40mit will spend a long time![0m
+[0;33;40mit will spend a long time! spend time : 0.9664003849029541s [0m
+
+[0;33;40mIP h5 support dataset 3 saving........................[0m
+../h5dataset_ica_bandselect_200/IP_28_28_100_support5_3.h5
+[0;33;40mIP h5 support dataset 3 save success! [0m
+
+[0;33;40mit will spend a long time![0m
+[0;33;40mit will spend a long time! spend time : 0.9760305881500244s [0m
+
+[0;33;40mIP h5 support dataset 4 saving........................[0m
+../h5dataset_ica_bandselect_200/IP_28_28_100_support5_4.h5
+[0;33;40mIP h5 support dataset 4 save success! [0m
+
+[0;33;40mit will spend a long time![0m
+[0;33;40mit will spend a long time! spend time : 0.973945140838623s [0m
+
+[0;33;40mIP h5 support dataset 5 saving........................[0m
+../h5dataset_ica_bandselect_200/IP_28_28_100_support5_5.h5
+[0;33;40mIP h5 support dataset 5 save success! [0m
+
+[0;33;40mit will spend a long time![0m
+[0;33;40mit will spend a long time! spend time : 0.9720096588134766s [0m
+
+[0;33;40mIP h5 support dataset 6 saving........................[0m
+../h5dataset_ica_bandselect_200/IP_28_28_100_support5_6.h5
+[0;33;40mIP h5 support dataset 6 save success! [0m
+
+[0;33;40mit will spend a long time![0m
+[0;33;40mit will spend a long time! spend time : 0.9981870651245117s [0m
+
+[0;33;40mIP h5 support dataset 7 saving........................[0m
+../h5dataset_ica_bandselect_200/IP_28_28_100_support5_7.h5
+[0;33;40mIP h5 support dataset 7 save success! [0m
+
+[0;33;40mit will spend a long time![0m
+[0;33;40mit will spend a long time! spend time : 0.9525928497314453s [0m
+
+[0;33;40mIP h5 support dataset 8 saving........................[0m
+../h5dataset_ica_bandselect_200/IP_28_28_100_support5_8.h5
+[0;33;40mIP h5 support dataset 8 save success! [0m
+
+[0;33;40mit will spend a long time![0m
+[0;33;40mit will spend a long time! spend time : 0.9416460990905762s [0m
+
+[0;33;40mIP h5 support dataset 9 saving........................[0m
+../h5dataset_ica_bandselect_200/IP_28_28_100_support5_9.h5
+[0;33;40mIP h5 support dataset 9 save success! [0m
+
+[0;33;40mit will spend a long time![0m
+[0;33;40mit will spend a long time! spend time : 0.9533312320709229s [0m
+
+[0;33;40mIP h5 support dataset 10 saving........................[0m
+../h5dataset_ica_bandselect_200/IP_28_28_100_support5_10.h5
+[0;33;40mIP h5 support dataset 10 save success! [0m
