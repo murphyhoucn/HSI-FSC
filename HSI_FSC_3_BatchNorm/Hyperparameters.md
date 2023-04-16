@@ -20,15 +20,15 @@
 | number | input                | operator    | kernel_size | padding   | stride    | output               |
 | :------: | :--------------------: | :-----------: | :-----------: | :---------: | :---------: | :--------------------: |
 | 1      | [20, 1, 100, 28, 28] | Conv3d      | (3, 3, 3)   | (1, 1, 1) | (1, 1, 1) |  |
-|        |                      | BatchNorm3d |             |           |           |  |
+|        |                      | ~~BatchNorm3d~~ |             |           |           |  |
 |        |                      | ReLU |             |           |           |                      |
 |        |                      | MaxPool3d | （4, 2, 2） | (1, 1, 1) | (1, 1, 1) | [20,  8, 25, 15, 15] |
 | 2 | [20,  8, 25, 15, 15] | Conv3d | (3, 3, 3) | (1, 1, 1) | (1, 1, 1) |                      |
-|        |                      | BatchNorm3d |             |           |           |                      |
+|        |                      | ~~BatchNorm3d~~ |             |           |           |                      |
 |        |                      | ReLU |             |           |           |                      |
 |        |                      | MaxPool3d | （4, 2, 2） | (1, 1, 1) | (1, 1, 1) | [20,  16, 6, 8, 8] |
 | 3 | [20,  16, 6, 8, 8] | Conv3d | (3, 3, 3) | (1, 1, 1) | (1, 1, 1) |                      |
-|        |                      | BatchNorm3d |             |           |           |                      |
+|        |                      | ~~BatchNorm3d~~ |             |           |           |                      |
 |        |                      | ReLU |             |           |           |                      |
 |        |                      | MaxPool3d | （4, 2, 2） | (1, 1, 1) | (1, 1, 1) | [20,  64, 2, 5, 5] |
 |        |                      |             |             |           |           |                      |
@@ -44,10 +44,10 @@
 | number | input                | operator    | kernel_size | padding   | stride    | output               |
 | :------: | :--------------------: | :-----------: | :-----------: | :---------: | :---------: | :--------------------: |
 | 1 | [7600, 256, 5, 5] | Conv2d | (1, 1) | (1, 1) | (1, 1) | [7600, 128, 5, 5] |
-|        |                   | BatchNorm2d |             |         |        |                      |
+|        |                   | ~~BatchNorm2d~~ |             |         |        |                      |
 |        |                      | ReLU |             |           |           |                      |
 | 2 | [7600, 128, 5, 5] | Conv2d | (3, 3) | (0, 0) | (1, 1) | [7600, 64, 3, 3] |
-|        |                      | BatchNorm2d |             |           |           |                      |
+|        |                      | ~~BatchNorm2d~~ |             |           |           |                      |
 |        |                      | ReLU |             |           |           |                      |
 | 3 | [7600, 64, 3, 3] | MaxPool2d | (3, 3) | (0, 0) | (1, 1) | [7600, 64, 1, 1] |
 | 4 | [7600, 64, 1, 1] | flatten |             |           |           | [7600, 64] |
@@ -67,8 +67,10 @@ self.dropout = nn.Dropout(p = 0.5)
 ## BatchNorm
 
 NoBN
-<!-- - Embedding  Network & Relation Network
-- behind every Cond2/3d -->
+
+- ~~Embedding  Network & Relation Network~~
+
+- ~~behind every Cond2/3d~~
 
 
 ## Optimizer

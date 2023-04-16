@@ -4,7 +4,7 @@
 --learning_rate 0.1
 
 ## C Way
---n_way 20
+--n_way 15
 
 ## K Shot
 --n_shot 1

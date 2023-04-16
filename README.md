@@ -63,13 +63,28 @@ ipython                           8.12.0
 >
 > **memory**:：80GB
 
+> **Image **： PyTorch 1.11.0 / Python 3.8(ubuntu20.04) / Cuda 11.3
+>
+> **GPU**：RTX A4000(16GB) * 1
+>
+> **CPU**:：12 vCPU Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz
+>
+> **memory**:：32GB
+
+> **Image **： PyTorch 1.11.0 / Python 3.8(ubuntu20.04) / Cuda 11.3
+>
+> **GPU**：Tesla T4(16GB) * 1
+>
+> **CPU**:：8 vCPU Intel(R) Xeon(R) Processor (Skylake, IBRS)
+>
+> **memory**:：56GB
+
+
 # directory
 
 ``` markdown
 
 ```
-
-
 
 # run
 
@@ -84,8 +99,8 @@ python -m visdom.server
 ### server
 
 ``` bash
-# 步骤一：在服务器上install visdom的0.1.8.9的版本 
-pip install visdom==0.1.8.9 
+# 步骤一：在服务器上install visdom
+pip install visdom
 
 # 步骤二：服务器上启动visdom 
 python -m visdom.server
@@ -94,8 +109,6 @@ python -m visdom.server
 ssh -L <本地端口>:localhost:8097 -p <ssh访问服务器的端口> <服务器用户名>@<ssh访问服务器的ip>
 # 本地端口号可以随便设置，服务器用户名和ssh访问服务器的ip都可以在AutoDL中查看到
 ssh -L 8080:localhost:8097  -p 23844 root@region-11.autodl.com 
-#或
-ssh -L 8080:container-e19b1182ac-a63c0c57:8097  -p 23844 root@region-11.autodl.com 
 
 # 步骤四：全部完成，在本地网页中输入" localhost:8080 "
 
@@ -163,8 +176,6 @@ python .\test.py --datasetname XX
 python .\display_result_with_visdom.py
 ```
 
-
-
 ## 8. contrast experiment
 
 ``` bash
@@ -183,25 +194,46 @@ python .\display_result_with_visdom.py
 
 # adjust the parameters
 
+## Leaning Rate
 
-RN_TargetDection_1_Learningrate
+``` bash
+├─HSI_FSC_1_learningrate
+```
 
-RN_TargetDection_2_dropout
+## Dropout
 
-RN_TargetDection_3_BactchNorm
+``` bash
+├─HSI_FSC_0_basic
+├─HSI_FSC_2_Dropout
+```
 
-RN_TargetDection_4_c_way
+## BatchNorm
 
-RN_TargetDection_5_k_shot_n_query
+``` bash
+├─HSI_FSC_0_basic
+├─HSI_FSC_3_BatchNorm
+```
 
-RN_TargetDection_6_inception
 
-RN_TargetDection_7_networkstructure
+## C way
 
-RN_TargetDection_finnal
+``` bash
+├─HSI_FSC_4_5way
+├─HSI_FSC_4_10way
+├─HSI_FSC_4_15way
+├─HSI_FSC_0_basic
+├─HSI_FSC_4_25way
+├─HSI_FSC_4_30way
+```
 
-optimizer
+## K shot N query
 
+``` bash
+├─HSI_FSC_0_basic
+├─HSI_FSC_5_support5_test15
+├─HSI_FSC_5_support10_test10
+├─HSI_FSC_5_support15_test5
+```
 
 # git push error!
 

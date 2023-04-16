@@ -7,10 +7,10 @@
 --n_way 20
 
 ## K Shot
---n_shot 1
+--n_shot 5
 
 ## N Query
---n_query 19
+--n_query 15
 
 ## Meta training episode
 --meta_episode 10000

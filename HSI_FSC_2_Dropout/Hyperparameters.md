@@ -59,11 +59,11 @@
 
 ## Dropout
 
-No Dropout
-<!-- self.dropout = nn.Dropout(p = 0.5) 
+**No Dropout**
+~~self.dropout = nn.Dropout(p = 0.5) ~~
 
-- Relation Network
-- in the front of sigmoid -->
+- ~~Relation Network~~
+- i~~n the front of sigmoid~~
 
 ## BatchNorm
 
