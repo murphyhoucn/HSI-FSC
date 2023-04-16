@@ -138,8 +138,7 @@ class RelationNetwork(nn.Module):
         out = F.relu(self.fc1(out))
         # print('out -> fc1\nsize out:', list(out.size()))
 
-        # 判断dropout
-        # out = self.dropout(out)
+        out = self.dropout(out)
 
         out = torch.sigmoid(self.fc2(out))
         # print('out -> fc2\nsize out:', list(out.size()))

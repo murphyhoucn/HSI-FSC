@@ -1,0 +1,5 @@
+**********meta_train_EM_RN.py_2023-04-16_11_36_36***********
+n_way = 20, n_shot = 1, n_query = 19, META_EPISODE = 1, LEARNING_RATE = 0.001, GPU = 0
+n_examples = 200, im_width = 28, im_height = 28, depth = 100
+[0;33;40mcheck the file![0m
+[0;33;40m../h5dataset_ica_bandselect_200//meta_train_11000_78400.h5[0m

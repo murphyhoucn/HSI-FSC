@@ -1,0 +1,8 @@
+************fewshot_train.py_2023-04-16_11_29_07************
+[0;33;40mcheck the file![0m
+[0;33;40m./model/meta_training_embedding_20way_1shot_19querty_0.001learning_1metatrainepisode.pkl[0m
+[0;33;40m./model/meta_training_relation_20way_1shot_19querty_0.001learning_1metatrainepisode.pkl[0m
+[0;33;40mload feature encoder success[0m
+[0;33;40mload relation network success[0m
+[0;33;40mcheck the file![0m
+[0;33;40m../h5dataset_ica_bandselect_200/XZ_28_28_100_support5_1.h5[0m
