@@ -422,7 +422,7 @@ def metrics(prediction, target, ignored_labels=[], n_classes=None, model_name='n
     return results
 
 
-def show_results(results, vis, label_values=None, agregated=False):
+def show_results(MODEL, DATASET, results, vis, label_values=None, agregated=False):
     text = ""
 
     if agregated:
@@ -486,6 +486,24 @@ def show_results(results, vis, label_values=None, agregated=False):
     print("AA = {} %".format(aa_tmp / len(sum(cm)) * 100))
     # ========== <utils show_results> murphy 13-apr-23 ==========
 
+    # ========== <utils show_results> murphy 16-apr-23 ==========
+    # MODEL, DATASET
+    import time    
+    nowtime = time.localtime()
+    nowtime_style = time.strftime("%Y-%m-%d__%H_%M_%S", nowtime)
+    nowtime_style
+    txt_path = './log/' + MODEL + '/' + DATASET + '_' + nowtime_style +'.txt'
+    print(txt_path)
+    f = open(txt_path, 'w')
+    for label, score in zip(label_values, F1scores):
+        f.write(str(score) + '\n')
+    f.write(str(accuracy) + '\n')
+    aa = aa_tmp / len(sum(cm)) * 100
+    f.write(str(aa) + '\n')
+    f.write(str(kappa * 100) + '\n')
+    # ========== <utils show_results> murphy 16-apr-23 ==========
+
+    
 def sample_gt(gt, train_size, mode='random'):
     """Extract a fixed percentage of samples from an array of labels.
 

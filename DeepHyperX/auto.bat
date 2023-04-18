@@ -1,4 +1,4 @@
-@REM call python main.py --model SVM --cuda 0 --dataset Salinas 
+call python main.py --model SVM --cuda 0 --dataset Salinas 
 call python main.py --model SVM --cuda 0 --dataset IndianPines 
 @REM call python main.py --model SVM --cuda 0 --dataset PaviaU 
 @REM call python main.py --model SVM --cuda 0 --dataset PaviaC 

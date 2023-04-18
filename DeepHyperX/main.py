@@ -573,7 +573,7 @@ for run in range(N_RUNS):
     print("=====<main> murphy 14-apr-23 ==========")
 
     results.append(run_results)
-    show_results(run_results, viz, label_values=LABEL_VALUES)
+    show_results(MODEL, DATASET, run_results, viz, label_values=LABEL_VALUES)
 
 if N_RUNS > 1:
-    show_results(results, viz, label_values=LABEL_VALUES, agregated=True)
+    show_results(MODEL, DATASET, results, viz, label_values=LABEL_VALUES, agregated=True)

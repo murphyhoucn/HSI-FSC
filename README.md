@@ -241,6 +241,7 @@ python .\display_result_with_visdom.py
 # 设置代理
 (base) PS D:\Document\DevelopProject\Develop_DeepLearning\HSI\HSI-FSC> git config --global http.proxy http://127.0.0.1:7890
 (base) PS D:\Document\DevelopProject\Develop_DeepLearning\HSI\HSI-FSC> git config --global https.proxy http://127.0.0.1:7890
+# 查看代理
 (base) PS D:\Document\DevelopProject\Develop_DeepLearning\HSI\HSI-FSC> git config --global https.proxy
 http://127.0.0.1:7890
 (base) PS D:\Document\DevelopProject\Develop_DeepLearning\HSI\HSI-FSC> git config --global http.proxy
