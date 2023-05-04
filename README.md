@@ -59,25 +59,25 @@ ipython                           8.12.0
 >
 > **GPU**：RTX 3090(24GB) * 1
 >
-> **CPU**:：24 vCPU AMD EPYC 7642 48-Core Processor
+> **CPU**：24 vCPU AMD EPYC 7642 48-Core Processor
 >
-> **memory**:：80GB
+> **memory**：80GB
 
 > **Image **： PyTorch 1.11.0 / Python 3.8(ubuntu20.04) / Cuda 11.3
 >
 > **GPU**：RTX A4000(16GB) * 1
 >
-> **CPU**:：12 vCPU Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz
+> **CPU**：12 vCPU Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz
 >
-> **memory**:：32GB
+> **memory**：32GB
 
 > **Image **： PyTorch 1.11.0 / Python 3.8(ubuntu20.04) / Cuda 11.3
 >
 > **GPU**：Tesla T4(16GB) * 1
 >
-> **CPU**:：8 vCPU Intel(R) Xeon(R) Processor (Skylake, IBRS)
+> **CPU**：8 vCPU Intel(R) Xeon(R) Processor (Skylake, IBRS)
 >
-> **memory**:：56GB
+> **memory**：56GB
 
 
 # directory

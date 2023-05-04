@@ -1,8 +1,16 @@
 import matplotlib.pyplot as plt
+from matplotlib import rcParams
 import pandas as pd
 import numpy as np
 from openpyxl import load_workbook
 
+config = {
+    "font.family":'serif',
+    "font.size": 18,
+    "mathtext.fontset":'stix',
+    "font.serif": ['SimSun'],
+}
+rcParams.update(config)
 
 
 
@@ -36,8 +44,8 @@ def acc(excel_data):
     plt.plot(list_num,list_lr001_data,':',color = 'c',label="lr = 0.01")
     plt.plot(list_num,list_lr0001_data,'-',color = 'r',label="lr = 0.001")
     plt.plot(list_num,list_lr00001_data,':',color = 'g',label="lr = 0.0001")
-    plt.xlabel("episode")#横坐标名字
-    plt.ylabel("accuracy")#纵坐标名字
+    plt.xlabel("迭代次数")#横坐标名字
+    plt.ylabel("训练精度")#纵坐标名字
     plt.legend(loc = "best")#图例
     plt.show()
 
@@ -72,8 +80,8 @@ def loss(excel_data):
     plt.plot(list_num,list_lr0001_data,'-',color = 'r',label="lr = 0.001")
     plt.plot(list_num,list_lr00001_data,':',color = 'g',label="lr = 0.0001")
     
-    plt.xlabel("episode")#横坐标名字
-    plt.ylabel("loss")#纵坐标名字
+    plt.xlabel("迭代次数")#横坐标名字
+    plt.ylabel("损失值")#纵坐标名字
     plt.legend(loc = "best")#图例
     plt.show()
 
