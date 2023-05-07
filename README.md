@@ -47,14 +47,6 @@ ipython                           8.12.0
 
 [AutoDL-品质GPU租用平台-租GPU就上AutoDL](https://www.autodl.com/home)
 
-> **Image **：PyTorch 1.11.0 / Python 3.8(ubuntu20.04) / Cuda 11.3
->
-> **GPU**：RTX 3080(10GB) * 1
->
-> **CPU**：12 vCPU Intel(R) Xeon(R) Platinum 8255C CPU @ 2.50GHz
->
-> **memory**：40GB
-
 > **Image **： PyTorch 1.11.0 / Python 3.8(ubuntu20.04) / Cuda 11.3
 >
 > **GPU**：RTX 3090(24GB) * 1
@@ -63,27 +55,18 @@ ipython                           8.12.0
 >
 > **memory**：80GB
 
-> **Image **： PyTorch 1.11.0 / Python 3.8(ubuntu20.04) / Cuda 11.3
->
-> **GPU**：RTX A4000(16GB) * 1
->
-> **CPU**：12 vCPU Intel(R) Xeon(R) Gold 5320 CPU @ 2.20GHz
->
-> **memory**：32GB
-
-> **Image **： PyTorch 1.11.0 / Python 3.8(ubuntu20.04) / Cuda 11.3
->
-> **GPU**：Tesla T4(16GB) * 1
->
-> **CPU**：8 vCPU Intel(R) Xeon(R) Processor (Skylake, IBRS)
->
-> **memory**：56GB
-
-
 # directory
 
 ``` markdown
-
+.
+|-- DeepHyperX
+|-- HSI_FSC_0_basic
+|-- HSI_FSC_result
+|-- ICA-based-band-selection-HSI
+|-- LICENSE
+|-- README.md
+|-- RN_FSC_modify
+`-- requirements.txt
 ```
 
 # run
@@ -189,8 +172,6 @@ python .\display_result_with_visdom.py
  # linux
  bash auto.sh
 ```
-
-
 
 # adjust the parameters
 
