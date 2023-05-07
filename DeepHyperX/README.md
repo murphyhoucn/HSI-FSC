@@ -2,10 +2,6 @@
 
 A Python tool to perform deep learning experiments on various hyperspectral datasets.
 
-![https://www.onera.fr/en/research/information-processing-and-systems-domain](https://www.onera.fr/sites/default/files/logo-onera.png|height=60)
-
-![https://www-obelix.irisa.fr/](https://www.irisa.fr/sites/all/themes/irisa_theme/logoIRISA-web.png|width=60)
-
 ## Reference
 
 This toolbox was used for our review paper in Geoscience and Remote Sensing Magazine :

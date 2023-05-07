@@ -47,7 +47,7 @@ ipython                           8.12.0
 
 [AutoDL-品质GPU租用平台-租GPU就上AutoDL](https://www.autodl.com/home)
 
-> **Image **： PyTorch 1.11.0 / Python 3.8(ubuntu20.04) / Cuda 11.3
+> **Image**： PyTorch 1.11.0 / Python 3.8(ubuntu20.04) / Cuda 11.3
 >
 > **GPU**：RTX 3090(24GB) * 1
 >
