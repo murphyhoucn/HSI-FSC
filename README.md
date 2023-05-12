@@ -69,7 +69,7 @@ ipython                           8.12.0
 `-- requirements.txt
 ```
 
-# run
+# run Meta-DRN
 
 ## 1. visdom
 
@@ -131,7 +131,6 @@ python .\generate_meta_dataset.py
 ### 3.2 generate target dataset
 ``` bash
 python .\generate_target_dataset --dataset XX
-
 # XX: SA/IP/UP/PC/XZ
 ```
 
@@ -153,13 +152,16 @@ python .\fewshot_train.py --datasetname XX
 python .\test.py --datasetname XX
 ```
 
+> Step Merge
+> use 'auto.sh' can merge the step 4, 5 and 6
+
 ## 7. generate predict image
 
 ``` bash
 python .\display_result_with_visdom.py
 ```
 
-## 8. contrast experiment
+# contrast experiment
 
 ``` bash
  cd .\DeepHyperX\
