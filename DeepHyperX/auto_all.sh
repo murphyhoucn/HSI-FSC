@@ -1,0 +1,10 @@
+bash auto.sh
+bash auto.sh
+bash auto.sh
+bash auto.sh
+bash auto.sh
+bash auto.sh
+bash auto.sh
+bash auto.sh
+bash auto.sh
+bash auto.sh
